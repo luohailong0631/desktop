@@ -31,10 +31,6 @@ export function enablePRIntegration(): boolean {
   return enableBetaFeatures()
 }
 
-export function enableCompareTab(): boolean {
-  return enableDevelopmentFeatures()
-}
-
 /** Should merge tool integration be enabled? */
 export function enableMergeTool(): boolean {
   return enableDevelopmentFeatures()

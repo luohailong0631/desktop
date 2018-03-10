@@ -17,7 +17,6 @@ import {
   Foldout,
   FoldoutType,
   ImageDiffType,
-  CompareMode,
 } from '../app-state'
 import { AppStore } from '../stores/app-store'
 import { CloningRepository } from '../../models/cloning-repository'
@@ -108,14 +107,6 @@ export class Dispatcher {
     missing: boolean
   ): Promise<Repository> {
     return this.appStore._updateRepositoryMissing(repository, missing)
-  }
-
-  public loadCompareState(
-    repository: Repository,
-    branch: Branch | null,
-    mode: CompareMode
-  ): Promise<void> {
-    return this.appStore._loadCompareState(repository, branch, mode)
   }
 
   /** Load the history for the repository. */
